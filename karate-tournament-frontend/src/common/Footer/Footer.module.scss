@@ -1,0 +1,50 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: $background-color-dark;
+  border-top: 0.063rem solid $drop-shadow-color;
+  font-family: $font-poppins;
+  color: $color-text;
+
+  .title {
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    &:hover {
+      transition: 0.2s ease;
+      color: $color-text-hover;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    color: $color-text;
+    justify-content: space-between;
+
+    @include bp(l) {
+      padding: 3.125rem 11.875rem 1rem;
+    }
+
+    .navItemContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9375rem;
+
+      .navItem {
+        cursor: pointer;
+        transition: 0.2s ease;
+
+        &:hover {
+          transition: 0.2s ease;
+          color: $color-text-hover;
+        }
+      }
+    }
+  }
+}

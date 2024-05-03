@@ -1,0 +1,51 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.navigationContainer {
+  display: flex;
+  justify-content: center;
+  padding: 1.75rem 0;
+  position: relative;
+  background-color: $background-color-dark;
+  color: $color-text;
+  font-family: $font-poppins;
+  box-shadow: 0 -6px 10px 5px $drop-shadow-color;
+
+  .innerNavigation {
+    width: 95%;
+    margin: auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      cursor: pointer;
+      transition: 0.2s ease;
+
+      &:hover {
+        transition: 0.2s ease;
+        color: $color-text-hover;
+      }
+    }
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .navigationItem {
+        font-family: $font-poppins;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        gap: 0.375rem;
+        transition: 0.2s ease;
+
+        &:hover {
+          transition: 0.2s ease;
+          color: $color-text-hover;
+        }
+      }
+    }
+  }
+}
